@@ -1,10 +1,9 @@
 -- Made By yenilmez_xxgg
--- yenilmezxxgg#1434 
 
 local qwe = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
-local settings = Instance.new("ImageButton")
+local setings = Instance.new("ImageButton")
 local UICorner_2 = Instance.new("UICorner")
 local scripts = Instance.new("ImageButton")
 local UICorner_3 = Instance.new("UICorner")
@@ -75,16 +74,16 @@ main.Size = UDim2.new(0, 582, 0, 319)
 UICorner.CornerRadius = UDim.new(0, 4)
 UICorner.Parent = main
 
-settings.Name = "settings"
-settings.Parent = main
-settings.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
-settings.BorderColor3 = Color3.fromRGB(46, 46, 46)
-settings.Position = UDim2.new(0.00713767856, 0, -0.000860997476, 0)
-settings.Size = UDim2.new(0, 93, 0, 83)
-settings.Image = "http://www.roblox.com/asset/?id=5107139351"
-settings.ImageColor3 = Color3.fromRGB(0, 0, 0)
+setings.Name = "setings"
+setings.Parent = main
+setings.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+setings.BorderColor3 = Color3.fromRGB(46, 46, 46)
+setings.Position = UDim2.new(0.00713767856, 0, -0.000860997476, 0)
+setings.Size = UDim2.new(0, 93, 0, 83)
+setings.Image = "http://www.roblox.com/asset/?id=5107139351"
+setings.ImageColor3 = Color3.fromRGB(0, 0, 0)
 
-UICorner_2.Parent = settings
+UICorner_2.Parent = setings
 
 scripts.Name = "scripts"
 scripts.Parent = main
@@ -601,18 +600,83 @@ UICorner_12.Parent = qwe_2
 
 -- Scripts:
 
-local function JYQG_fake_script() -- close.LocalScript 
+local function SMZIKVA_fake_script() -- close.LocalScript 
 	local script = Instance.new('LocalScript', close)
 
-	print("Hello world!")
+	cooldown = false
+	open = true
 	
+	script.Parent.MouseButton1Click:connect(function()
+		if cooldown == false then
+			if open == true then
+				cooldown = true
+				script.Parent.Parent.settingframe:TweenPosition(UDim2.new(4, 0,0.147, 0))
+				script.Parent.Parent.scriptsframe:TweenPosition(UDim2.new(4, 0,0.147, 0)) 
+				script.Parent.Parent.creditsframe:TweenPosition(UDim2.new(4, 0,0.147, 0))
+				wait(0.5)
+				script.Parent.Parent.credits:TweenSize(UDim2.new(0,0,0,0))
+				script.Parent.Parent.scripts:TweenSize(UDim2.new(0,0,0,0))
+				script.Parent.Parent.settings:TweenSize(UDim2.new(0,0,0,0))
+				script.Parent.Parent.SearchBar:TweenSize(UDim2.new(0,0,0,0))
+				script.Parent.Parent.ert:TweenSize(UDim2.new(0,0,0,0))
+				script.Parent.Parent.ewq:TweenSize(UDim2.new(0,0,0,0))
+				script.Parent.Parent.yia:TweenSize(UDim2.new(0,0,0,0))
+				wait(0.6)
+				script.Parent.Parent.credits.Visible = false
+				script.Parent.Parent.scripts.Visible = false
+				script.Parent.Parent.settings.Visible = false
+				script.Parent.Parent.SearchBar.Visible = false
+				script.Parent.Parent.ert.Visible = false
+				script.Parent.Parent.ewq.Visible = false
+				script.Parent.Parent.yia.Visible = false
+				wait(1)
+				script.Parent.Parent.Parent.main:TweenSize(UDim2.new(0, 582,0, 37))
+				wait(1)
+				script.Parent.Parent.close:TweenPosition(UDim2.new(-0, 0,0, 0))
+				script.Parent.Parent.exit:TweenPosition(UDim2.new(0.092, 0,0, 0))
+				open = false
+				cooldown = false
+			elseif open == false then
+				cooldown = true
+				script.Parent.Parent.close:TweenPosition(UDim2.new(0.926, 0,0, 0))
+				script.Parent.Parent.exit:TweenPosition(UDim2.new(0.852, 0,0, 0))
+				wait(0.8)
+				script.Parent.Parent.Parent.main:TweenSize(UDim2.new(0, 582,0, 319))
+				wait(0.3)
+				script.Parent.Parent.credits.Visible = true
+				script.Parent.Parent.scripts.Visible = true
+				script.Parent.Parent.settings.Visible = true
+				script.Parent.Parent.SearchBar.Visible = true
+				script.Parent.Parent.ert.Visible = true
+				script.Parent.Parent.ewq.Visible = true
+				script.Parent.Parent.yia.Visible = true
+				script.Parent.Parent.credits:TweenSize(UDim2.new(0, 93,0, 86))
+				script.Parent.Parent.scripts:TweenSize(UDim2.new(0, 86,0, 86))
+				script.Parent.Parent.settings:TweenSize(UDim2.new(0, 93,0, 83))
+				script.Parent.Parent.SearchBar:TweenSize(UDim2.new(0.653, 0,0.075, 0))
+				script.Parent.Parent.ert:TweenSize(UDim2.new(0, 12,0, 318))
+				script.Parent.Parent.ewq:TweenSize(UDim2.new(0, 107,0, 12))
+				script.Parent.Parent.yia:TweenSize(UDim2.new(0, 107,0, 12))
+				
+				script.Parent.Parent.credits:TweenPosition(UDim2.new(0.012, 0,0.709, 0))
+				script.Parent.Parent.scripts:TweenPosition(UDim2.new(0.011, 0,0.333, 0))
+				script.Parent.Parent.settings:TweenPosition(UDim2.new(0.007, 0,-0.001, 0))
+				script.Parent.Parent.SearchBar:TweenPosition(UDim2.new(0.509, 0,0.012, 0))
+				script.Parent.Parent.ert:TweenPosition(UDim2.new(0.167, 0,0, 0))
+				script.Parent.Parent.ewq:TweenPosition(UDim2.new(0, 0,0.258, 0))
+				script.Parent.Parent.yia:TweenPosition(UDim2.new(0, 0,0.647, 0))
+				open = true
+				cooldown = false
+			end
+		end
+	end)
 end
-coroutine.wrap(JYQG_fake_script)()
-local function PYRCJLK_fake_script() -- main.LocalScript 
+coroutine.wrap(SMZIKVA_fake_script)()
+local function CNOJMWA_fake_script() -- main.LocalScript 
 	local script = Instance.new('LocalScript', main)
 
 	local searchBar = script.Parent.SearchBar
-	local items = script.Parent.scripts
+	local items = script.Parent.scriptsframe
 	
 	function UpdateResults()
 		local search = string.lower(searchBar.Text)
@@ -634,8 +698,8 @@ local function PYRCJLK_fake_script() -- main.LocalScript
 	
 	searchBar.Changed:Connect(UpdateResults)
 end
-coroutine.wrap(PYRCJLK_fake_script)()
-local function KHLVWPO_fake_script() -- main.DraggableScript 
+coroutine.wrap(CNOJMWA_fake_script)()
+local function GHHSKMA_fake_script() -- main.DraggableScript 
 	local script = Instance.new('LocalScript', main)
 
 	--This script was created by Tiffblocks and uploaded by me :P
@@ -679,32 +743,79 @@ local function KHLVWPO_fake_script() -- main.DraggableScript
 		end
 	end)
 end
-coroutine.wrap(KHLVWPO_fake_script)()
-local function VGIOTEV_fake_script() -- xder.LocalScript 
+coroutine.wrap(GHHSKMA_fake_script)()
+local function UEUOZYE_fake_script() -- xder.LocalScript 
 	local script = Instance.new('LocalScript', xder)
 
-	print("Hello world!")
+	script.Parent.Text = game.Players.LocalPlayer.Character.Name
 	
 end
-coroutine.wrap(VGIOTEV_fake_script)()
-local function BLZS_fake_script() -- ng.LocalScript 
+coroutine.wrap(UEUOZYE_fake_script)()
+local function WEYA_fake_script() -- ng.LocalScript 
 	local script = Instance.new('LocalScript', ng)
 
-	print("Hello world!")
-	
+	script.Parent.Text = game.Players.LocalPlayer.UserId
 end
-coroutine.wrap(BLZS_fake_script)()
-local function QQSIMCB_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(WEYA_fake_script)()
+local function EMJA_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
-	print("Hello world!")
-	
+	script.Parent.Image = "http://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&userId=" .. game.Players.LocalPlayer.UserId
 end
-coroutine.wrap(QQSIMCB_fake_script)()
-local function FRJJXB_fake_script() -- qwe.LocalScript 
+coroutine.wrap(EMJA_fake_script)()
+local function LQLKB_fake_script() -- qwe.LocalScript 
 	local script = Instance.new('LocalScript', qwe)
 
-	print("Hello world!")
+	
+	script.Parent.main.scripts.MouseButton1Click:Connect(function()
+		script.Parent.main.scriptsframe:TweenPosition(UDim2.new(0.196, 0,0.147, 0))
+		script.Parent.main.settingframe:TweenPosition(UDim2.new(4, 0,0.147, 0))  
+		script.Parent.main.creditsframe:TweenPosition(UDim2.new(4, 0,0.147, 0))
+	end)
+	
+	
+	script.Parent.main.setings.MouseButton1Click:Connect(function()
+		script.Parent.main.settingframe:TweenPosition(UDim2.new(0.196, 0,0.147, 0))
+		script.Parent.main.scriptsframe:TweenPosition(UDim2.new(4, 0,0.147, 0)) 
+		script.Parent.main.creditsframe:TweenPosition(UDim2.new(4, 0,0.147, 0))
+	end)
+	
+	script.Parent.main.credits.MouseButton1Click:Connect(function()
+		script.Parent.main.settingframe:TweenPosition(UDim2.new(4, 0,0.147, 0))
+		script.Parent.main.scriptsframe:TweenPosition(UDim2.new(4, 0,0.147, 0)) 
+		script.Parent.main.creditsframe:TweenPosition(UDim2.new(0.196, 0,0.147, 0))
+	end)
+	
+	script.Parent.main.exit.MouseButton1Click:Connect(function()
+		script.Parent.main.credits:TweenSize(UDim2.new(0,0,0,0))
+		script.Parent.main.scripts:TweenSize(UDim2.new(0,0,0,0))
+		script.Parent.main.setings:TweenSize(UDim2.new(0,0,0,0))
+		script.Parent.main.SearchBar:TweenSize(UDim2.new(0,0,0,0))
+		script.Parent.main.ert:TweenSize(UDim2.new(0,0,0,0))
+		script.Parent.main.ewq:TweenSize(UDim2.new(0,0,0,0))
+		script.Parent.main.yia:TweenSize(UDim2.new(0,0,0,0))
+		script.Parent.main:TweenSize(UDim2.new(0, 0,0, 0))
+		script.Parent.main:TweenPosition(UDim2.new(0.466, 0,0.458, 0))
+		script.Parent.main.close:TweenSize(UDim2.new(0, 0,0, 0))
+		script.Parent.main.exit:TweenSize(UDim2.new(0, 0,0, 0))
+		script.Parent.main.scriptsframe:Destroy()
+		script.Parent.main.settingframe:Destroy()
+		script.Parent.main.creditsframe:Destroy()
+		wait(2)
+		for i = 1, 10 do
+			script.Parent.qwe.ImageTransparency = 1-(i/10)
+			wait()
+		end
+		wait(1)
+		for i = 1, 10 do
+			script.Parent.qwe.ImageTransparency = i/10
+			wait()
+		end
+		wait(1)
+		script.Parent.main:Destroy()
+	end)
+	
+	
 	
 end
-coroutine.wrap(FRJJXB_fake_script)()
+coroutine.wrap(LQLKB_fake_script)()
